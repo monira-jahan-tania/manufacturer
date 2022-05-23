@@ -4,9 +4,9 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer style={{
-            backgroundColor: ' 	#ff6666',
-            backgroundSize: 'cover',
-            color: '#fff'
+            // backgroundColor: ' 	#ff6666',
+            // backgroundSize: 'cover',
+            // color: '#fff'
         }} className="p-10">
             <div className='footer'>
                 <div>
