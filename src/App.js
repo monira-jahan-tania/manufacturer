@@ -18,7 +18,8 @@ function App() {
         <Route path='/login' element={<Login />}>
         </Route>
         <Route path='/register' element={<Register />}></Route>
-        <Route path='/purchase' element={<Purchase />}></Route>
+        <Route path='/purchase/:id' element={<Purchase />}></Route>
+
 
       </Routes>
       <Footer></Footer>
