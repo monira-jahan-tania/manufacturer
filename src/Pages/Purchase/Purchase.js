@@ -38,7 +38,8 @@ const Purchase = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.success) {
-                    toast.success(`Your order is done: ${data.name}`)
+                    toast.success(`Your order is done: ${data.name}`);
+                    data = {};
                 }
             })
 
