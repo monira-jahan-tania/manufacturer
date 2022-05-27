@@ -4,7 +4,7 @@
         "name": "Torque",
         "price": "300",
         "description": "Thread: G1/4 BSP; 4.5mm male thread length, Supported tube: 12mm OD, 20mm outer diameter of a fitting, Installed height: 15mm",
-        "quantity": 10,
+        "quantity": 2000,
         "supplierName": "Abdul Momin",
         "img": "https://i.ibb.co/Sdsy3V6/torque.jpg"
     },
@@ -13,7 +13,7 @@
         "name": "Tube Clamp",
         "price": "100",
         "description": "Fast and Easy Clamping to Ensure, Very Strong Plastic Materials, Highly Durable, High Degree of Adjustability",
-        "quantity": 12,
+        "quantity": 2000,
         "supplierName": "Siam Hossain",
         "img": "https://i.ibb.co/5YjsBCF/tube-Clamp.jpg"
     },
@@ -22,8 +22,8 @@
         "name": "Sound Card",
         "price": "150",
         "description": "Output: 3.5mm microphone x1, 3.5mm earphone, Input interface: USB2.0, 10cm Integrated Cable, Driver-free, Plug and Play",
-        "quantity": 8,
-        "supplierName": "Rayhanur Rash_id",
+        "quantity": 2000,
+        "supplierName": "Rayhanur Rashid",
         "img": "https://i.ibb.co/0rkhRfJ/sound-Card.jpg"
     },
     {
@@ -31,7 +31,7 @@
         "name": "Socket",
         "price": "180",
         "description": "Compatible R1, C1,H5 series, H7 Quad Lumi, sTR4 Upgrade Clip Kit, Support AMDRyzen and Threadripper",
-        "quantity": 8,
+        "quantity": 2000,
         "supplierName": "Monira Jahan Tania",
         "img": "https://i.ibb.co/jGLs5sm/socket.jpg"
     },
@@ -40,7 +40,7 @@
         "name": "Casing Fan",
         "price": "100",
         "description": "Dual ring lighting effect design, Speed: 1200 RPM ± 10%, Pre-installed anti-vibration rubber pads, Noise: 25 dBA",
-        "quantity": 6,
+        "quantity": 2000,
         "supplierName": "MD. Sanwar",
         "img": "https://i.ibb.co/zGvVPnJ/casing-Fan.jpg"
     },
@@ -49,7 +49,7 @@
         "name": "PC Cooler",
         "price": "300",
         "description": "Maximum Speed: 1400RPM, Max. Air Flow: 45.18CFM, Noise Level: 8~26.5dB(A), Bearing Type: Hydraulic Bearing",
-        "quantity": 4,
+        "quantity": 2000,
         "supplierName": "Farhat Snigdho",
         "img": " https://i.ibb.co/6yzvqwS/pcCooler.jpg"
     }
