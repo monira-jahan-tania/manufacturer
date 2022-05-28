@@ -7,18 +7,9 @@ import Loading from '../Shared/Loading';
 const AddProduct = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
-    // const { data: services, isLoading } = useQuery('services', () => fetch('https://secret-dusk-46242.herokuapp.com/service').then(res => res.json()))
 
     const imageStorageKey = '1c1ca95b2d14a219f0a5d0b88b30af55';
 
-    /**
-     * 3 ways to store images
-     * 1. Third party storage //Free open public storage is ok for Practice project 
-     * 2. Your own storage in your own server (file system)
-     * 3. Database: Mongodb 
-     * 
-     * YUP: to validate file: Search: Yup file validation for react hook form
-    */
     const onSubmit = async data => {
         console.log(data);
         const image = data.img[0];
@@ -46,7 +37,7 @@ const AddProduct = () => {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
-                            // authorization: `Bearer ${localStorage.getItem('accessToken')}`
+
                         },
                         body: JSON.stringify(parts)
                     })
@@ -72,8 +63,8 @@ const AddProduct = () => {
 
     return (
         <div>
-            <h2 className="text-2xl">Add a New Doctor</h2>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <h2 className="text-2xl">Add a New Product</h2>
+            <form className='flex flex-col items-center justify-center' onSubmit={handleSubmit(onSubmit)}>
 
                 <div className="form-control w-full max-w-xs">
                     <label className="label">

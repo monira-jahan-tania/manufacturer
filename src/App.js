@@ -19,13 +19,17 @@ import Payment from './Pages/Dashboard/Payment';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import ManageOrders from './Pages/Dashboard/ManageOrders';
 import AddProduct from './Pages/Dashboard/AddProduct';
+import ManageProducts from './Pages/Dashboard/ManageProducts';
+import Protfolio from './Pages/Protfolio';
+import NotFound from './Pages/NotFound';
 
 function App() {
   return (
     <div className="App max-w-7xl mx-auto px-12">
       <Navbar></Navbar>
       <Routes>
-        <Route path='/' element={<Home />}>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/protfolio' element={<Protfolio />}>
         </Route>
         <Route path='/login' element={<Login />}>
         </Route>
@@ -47,10 +51,11 @@ function App() {
           <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path='manageAllOrders' element={<RequireAdmin><ManageOrders /></RequireAdmin>}></Route>
           <Route path='addProducts' element={<RequireAdmin><AddProduct /></RequireAdmin>}></Route>
+          <Route path='manageProducts' element={<RequireAdmin><ManageProducts /></RequireAdmin>}></Route>
 
         </Route>
 
-
+        <Route path='*' element={<NotFound />}></Route>
 
       </Routes>
       <Footer></Footer>

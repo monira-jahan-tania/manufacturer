@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import people1 from '../../images/people1.png';
 import people2 from '../../images/people2.png';
 import people3 from '../../images/people3.png';
@@ -6,29 +6,17 @@ import Review from './Review';
 import quote from '../../images/quote.svg';
 
 const Reviews = () => {
-    const reviews = [
-        {
-            _id: 1,
-            name: 'Winson Herry',
-            review: '',
-            location: 'california',
-            img: people1
-        },
-        {
-            _id: 2,
-            name: 'Winson Herry',
-            review: '',
-            location: 'california',
-            img: people2
-        },
-        {
-            _id: 3,
-            name: 'Winson Herry',
-            review: '',
-            location: 'california',
-            img: people3
-        },
-    ];
+    const [reviews, setReviews] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/review', {
+            method: 'GET',
+            // headers: {
+            //     'content-type': 'application/json'
+            // }
+        })
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
     return (
         <section className='my-28'>
             <div className='my-10'>

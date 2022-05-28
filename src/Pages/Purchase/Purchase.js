@@ -38,7 +38,7 @@ const Purchase = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.success) {
-                    toast.success(`Your order is done: ${data.purchase}`);
+                    toast.success(`Your order is done: ${part.name}`);
                     data = null;
                 }
             })
@@ -66,7 +66,7 @@ const Purchase = () => {
                 <form className='grid grid-cols-1 gap-3 justify-items-center mt-2' onSubmit={handlePurchase}>
                     <input type="text" name="name" disabled value={user?.displayName || ''} className="input input-bordered w-full max-w-lg" />
                     <input type="email" name="email" disabled value={user?.email || ''} className="input input-bordered w-full max-w-lg" />
-                    <input type="number" name="quantity" className="input input-bordered w-full max-w-lg" />
+                    <input type="number" placeholder='Enter quantity' name="quantity" className="input input-bordered w-full max-w-lg" />
                     <input type="text" name="address" placeholder="Address" className="input input-bordered w-full max-w-lg" />
                     <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-lg" />
                     <input type="submit" value="Place Order" className="btn btn-secondary w-full max-w-lg" />

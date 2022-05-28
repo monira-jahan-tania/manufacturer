@@ -22,7 +22,9 @@ const AddReviews = () => {
             .then(data => {
                 if (data.success) {
                     toast.success(`Your review is added`);
-                    data = null;
+                    event.target.name.value = ' ';
+                    event.target.description.value = ' ';
+                    event.target.rating.vlaue = ' ';
                 }
             })
     }
@@ -40,14 +42,7 @@ const AddReviews = () => {
                 <label class="label">
                     <span class="label-text">Your Rating:</span>
                 </label>
-                <select name='rating' class="select select-bordered w-full max-w-xs">
-                    <option disabled selected>Add Your Rating Out of 5</option>
-                    <option value='1'>1</option>
-                    <option value='2'>2</option>
-                    <option value='3'>3</option>
-                    <option value='4'>4</option>
-                    <option value='5'>5</option>
-                </select>
+                <input type="number" class="input input-bordered w-full max-w-xs" name='rating' placeholder='GIve your rating out of 5' />
                 <input type="submit" value="Submit Your Review" className="btn btn-secondary w-full max-w-lg mt-3" />
             </form>
         </div>

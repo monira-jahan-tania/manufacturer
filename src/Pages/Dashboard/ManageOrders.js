@@ -14,9 +14,9 @@ const ManageOrders = () => {
             .then(res => res.json())
             .then(data => setParts(data))
     }, [])
-    let shipped;
+    let shipped = 0;
     const handleShipped = (id) => {
-        shipped = true;
+        shipped = 1;
 
     }
     return (
@@ -43,7 +43,7 @@ const ManageOrders = () => {
                                 <td>{a.price}</td>
                                 <td>
                                     {(a.price && !a.paid) && <button className='btn btn-xs btn-success'>unpaid</button>}
-                                    {(a.price && a.paid) && <button className='btn btn-xs btn-success' onClick={() => handleShipped(a._id)}>{shipped ? 'shipped' : 'pending'}</button>}
+                                    {(a.price && a.paid) && <button className='btn btn-xs' onClick={handleShipped}>{shipped === 1 ? 'shipped' : 'pending'}</button>}
                                 </td>
                             </tr>)
                         }

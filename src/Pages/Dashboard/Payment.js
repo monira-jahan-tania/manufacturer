@@ -1,12 +1,13 @@
 import React from 'react';
-import { Elements } from '@stripe/react-stripe-js';
+import { Elements, PaymentElement } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import Loading from '../Shared/Loading';
 import CheckOutForm from './CheckOutForm';
 
-const stripePromise = loadStripe('pk_test_51KzgdMJVa6zVY99CaGts94G8qqJirQWPMAET7VBqrec0wWSxhuuRtgQNPA3SuwzjQKOv6QWwjgMWEfZ83N1qLNUU00IX1ciL6e');
+
+const stripePromise = loadStripe('pk_test_51L2IidJwxQ7Tn7y5eT7WEMbSWohQnBfcrSpsNWtrB8yWOejO3e0LoaC0Rknmqy2E3zugWOfSXdFb5maVoCyMzyXG00ycRDukPN');
 
 const Payment = () => {
     const { id } = useParams();
@@ -27,7 +28,7 @@ const Payment = () => {
             <div class="card w-50 max-w-md bg-base-100 shadow-xl my-12">
                 <div class="card-body">
                     <p className="text-success font-bold">Hello, {purchase.userName}</p>
-                    <h2 class="card-title">Please Pay for {purchase.purchase}</h2>
+                    <h2 >Please Pay for:  {purchase.purchase}</h2>
                     <p>Please pay: ${purchase.price}</p>
                 </div>
             </div>

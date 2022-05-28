@@ -6,7 +6,7 @@ import auth from '../../firebse.init';
 
 const MyProfile = () => {
     const [user] = useAuthState(auth);
-    const [upDateUser, setUpdateUser] = useState({})
+    const [updateUser, setUpdateUser] = useState({})
     const handleProfile = event => {
         event.preventDefault();
 
@@ -29,7 +29,7 @@ const MyProfile = () => {
                 //     toast.success(`Your order is done: ${data.purchase}`);
                 //     data = null;
                 // }
-                console.log(data);
+                console.log(data.result);
             })
 
     }
@@ -39,6 +39,9 @@ const MyProfile = () => {
         <div className='mt-5'>
             <h1 className='text-2xl font-bold'>Name: {user.displayName}</h1>
             <h1 className='text-xl'>Email: {user.email}</h1>
+            <h1 className='text-xl'>Education: {user.education}</h1>
+            <h1 className='text-xl'>Location: {user.location}</h1>
+            <h1 className='text-xl'>Phone: {user.phone}</h1>
 
             <form className='grid grid-cols-1 gap-3 justify-items-center mt-2' onSubmit={handleProfile}>
 
@@ -47,7 +50,7 @@ const MyProfile = () => {
 
                 <input type="number" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-lg" />
                 <input type="text" name="linkedin" placeholder="Your linkedin Link" className="input input-bordered w-full max-w-lg" />
-                <input type="submit" value="Place Order" className="btn btn-secondary w-full max-w-lg" />
+                <input type="submit" value="Update profile" className="btn btn-primary w-full max-w-lg" />
             </form>
 
 

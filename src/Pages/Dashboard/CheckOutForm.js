@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 
-const CheckOutForm = () => {
+const CheckOutForm = (props) => {
     const stripe = useStripe();
     const elements = useElements();
     const [cardError, setCardError] = useState('');
@@ -10,7 +10,7 @@ const CheckOutForm = () => {
     const [transactionId, setTransactionId] = useState('');
     const [clientSecret, setClientSecret] = useState('');
 
-    const { _id, price, purchase, userName } = purchase;
+    const { _id, price, purchase, userName } = props.purchase;
 
     useEffect(() => {
         fetch('http://localhost:5000/create-payment-intent', {
@@ -19,7 +19,7 @@ const CheckOutForm = () => {
                 'content-type': 'application/json',
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             },
-            body: JSON.stringify(purchase)
+            body: JSON.stringify({ price })
         })
             .then(res => res.json())
             .then(data => {
@@ -77,7 +77,7 @@ const CheckOutForm = () => {
 
             //store payment on database
             const payment = {
-                purchase: _id,
+                purchaseId: _id,
                 transactionId: paymentIntent.id
             }
             fetch(`http://localhost:5000/purchase/${_id}`, {
