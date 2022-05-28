@@ -22,6 +22,7 @@ import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
 import Protfolio from './Pages/Protfolio';
 import NotFound from './Pages/NotFound';
+import Blogs from './Pages/Blogs';
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home />}></Route>
-        <Route path='/protfolio' element={<Protfolio />}>
+        <Route path='/protfolio' element={<Protfolio />}></Route>
+        <Route path='/blogs' element={<Blogs />}>
         </Route>
         <Route path='/login' element={<Login />}>
         </Route>
