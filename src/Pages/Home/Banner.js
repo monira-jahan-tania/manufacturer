@@ -8,8 +8,8 @@ const Banner = () => {
                 <img src={banner} className=" w-[300px] lg:w-[700px] 
                 rounded-lg" />
                 <div>
-                    <h1 className="text-5xl font-bold">Your New Smile Starts Here</h1>
-                    <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <h1 className="text-5xl font-bold uppercase">Anyasha Tech</h1>
+                    <p className="py-6">This is one of the best menufacturer company in bangladesh. It provides high durable Computer engineering tools with a budget friendly cost</p>
 
                 </div>
             </div>
